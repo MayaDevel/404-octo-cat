@@ -1,36 +1,96 @@
 @font-face {
     font-family: Helvetica Neue;
     src: url("fonts/HelveticaNeueCyr-Light.otf");
+    src: url("fonts/HelveticaNeueCyr-Roman.otf");
 }
 body {
-    font-family: "Helvetica Neue", sans-serif;
     background-color: #F0F0F0;
+    font-family: "Helvetica Neue Light", sans-serif;
 }
-.header {
-    margin: -10px;
-    width: 100%;
-    background: url("images/header_background.jpg") no-repeat center;
-    background-size: 100%;
-    height: 370px;
+input[type="search"] {
+    border: 1px solid #CBCBCB;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 5px -3px #7E7E7E;
+    color: #323232;
+    font-family: "Helvetica Neue Roman", sans-serif;
+    font-size: 18px;
+    height: 38px;
+    margin-top: 7px;
+    outline:none;
+    padding-left: 9px;
+    padding-right: 8px;
+    width: 705px;
 }
-.search {
-    width: 800px;
-    margin-top: 40px;
-    text-align: center;
+input[type="search"]:focus {
+    border: 1px solid #52A7E7;
+    border-radius: 3px;
+    box-shadow: 0 0 5px #acd1ed;
 }
-.footer__logo {
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+input[type=submit] {
+    background: linear-gradient(to top, #EEEEEE, #FBFBFB);
+    border: 1px solid #D4D4D4;
+    border-radius: 3px;
+    color: #323232;
+    font-weight: bold;
+    height: 42px;
+    width: 90px;
+}
+li {
+    display: inline;
+}
+main { /*во втором варике убрала эти строчки и в .search добавила 2 строки*/
+    display: block;
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+}
 
+.footer__about {
+    margin-top: 34px;
+    text-align: center;
 }
 .footer__about-dash {
     color: #CBCBCB;
-    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .footer__about-item {
     color: #656565;
     font-size: 14px;
-    word-spacing: 1px;
     text-decoration: none;
+    word-spacing: 1px;
 }
 .footer__about-item:hover {
     text-decoration: underline;
+}
+.footer__logo {
+    display: block;
+    margin-left: 50%;
+    margin-top: 35px;
+}
+.header {
+    background: url("images/header_background.jpg") no-repeat center;
+    background-size: 100%;
+    height: 370px;
+    margin: -10px;
+    width: 100%;
+}
+.header__shadow {
+    background-size: 100%;
+    box-shadow: inset 0 0 10em;
+    height: 370px;
+    opacity: 0.1;
+    width: 100%;
+}
+.search {
+    margin-top: 45px;
+    width: 800px; /* а сюда добавила эти
+    margin-left: 20%;
+    margin-right: 80%;*/
 }
