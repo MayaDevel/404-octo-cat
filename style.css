@@ -6,6 +6,7 @@
 body {
     background-color: #F0F0F0;
     font-family: "Helvetica Neue Light", sans-serif;
+    margin: 0;
 }
 input[type="search"] {
     border: 1px solid #CBCBCB;
@@ -32,7 +33,7 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
     display: none;
 }
-input[type=submit] {
+input[type="submit"] {
     background: linear-gradient(to top, #EEEEEE, #FBFBFB);
     border: 1px solid #D4D4D4;
     border-radius: 3px;
@@ -44,13 +45,14 @@ input[type=submit] {
 li {
     display: inline;
 }
-main { /*во втором варике убрала эти строчки и в .search добавила 2 строки*/
-    display: block;
-    margin-left: 20%;
-    margin-right: 20%;
-    width: 60%;
+main {
+    margin: 0 auto;
+    width: 800px;
 }
-
+footer, main {
+    position: relative;
+    z-index: 6;
+}
 .footer__about {
     margin-top: 34px;
     text-align: center;
@@ -75,22 +77,59 @@ main { /*во втором варике убрала эти строчки и в
     margin-top: 35px;
 }
 .header {
-    background: url("images/header_background.jpg") no-repeat center;
+    background: url("images/header_background.jpg") no-repeat top;
     background-size: 100%;
     height: 370px;
-    margin: -10px;
     width: 100%;
+    z-index: 1;
+    position: relative;
+}
+.string {
+    margin-left: -300px;
+    position: relative;
+    z-index: 2;
 }
 .header__shadow {
-    background-size: 100%;
-    box-shadow: inset 0 0 10em;
-    height: 370px;
-    opacity: 0.1;
-    width: 100%;
+    /*background-size: 100%;*/
+    /*box-shadow: inset 0 0 10em;*/
+    /*height: 370px;*/
+    /*opacity: 0.1;*/
+    /*width: 100%;*/
 }
 .search {
-    margin-top: 45px;
-    width: 800px; /* а сюда добавила эти
-    margin-left: 20%;
-    margin-right: 80%;*/
+    margin-top: -816px;
+    position: relative;
+    z-index: 4;
+}
+.header_background {
+    margin-left: -50px;
+    width: 100px;
+}
+.header_hut-2 {
+    margin-top: 113px;
+    margin-left: 967px;
+}
+.header_hut-1 {
+    margin-top: 73px;
+    margin-left: 672px;
+}
+.header__octocat {
+    margin-top: 94px;
+    margin-left: 561px;
+}
+.header_octocats-shadow {
+    margin-top: 297px;
+    margin-left: 576px;
+}
+.header_starship {
+    margin-top: 150px;
+    margin-left: 637px;
+}
+.header_starship-shadow {
+    margin-top: 263px;
+    margin-left: 647px;
+}
+.header_text-shape {
+    margin-top: 72px;
+    margin-left: 277px;
 }

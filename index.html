@@ -7,16 +7,28 @@
 </head>
 <body>
     <header class="header">
-        <div class="header__shadow"></div>
+        <div class="header__shadow">
+            <div id="scene">
+                <div class="header_background" data-depth="0.15"><img src="images/header_background.jpg"></div>
+                <div class="header_hut-2" data-depth="0.28"><img src="images/header_hut-2.png"></div>
+                <div class="header_hut-1" data-depth="0.18"><img src="images/header_hut-1.png"></div>
+                <div class="header_starship-shadow" data-depth="0.03"><img src="images/header_starship-shadow.png"></div>
+                <div class="header_octocats-shadow" data-depth="0.03"><img src="images/header_octocats-shadow.png"></div>
+                <div class="header_text-shape" data-depth="0.073"><img src="images/header_text-shape.png"></div>
+                <div class="header_starship" data-depth="0.03"><img src="images/header_starship.png"></div>
+                <div data-depth="0.03"><img class="header__octocat" src="images/header_octocat.png"></div>
+            </div>
+        </div>
     </header>
     <main>
+        <div class="string"><img src="images/string.png"></div>
         <div class="search">
             Find code, projects, and people on GitHub:
-        </div>
-        <form>
+            <form>
                 <input type="search">
                 <input type="submit" value="Search">
-        </form>
+            </form>
+        </div>
     </main>
     <footer>
         <ul class="footer__about">
@@ -34,5 +46,13 @@
         </ul>
         <a href="https://github.com"><img class="footer__logo" src="images/footer_octocat.png"></a>
     </footer>
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+<script>
+    var scene = document.getElementById('scene');
+    var parallaxInstance = new Parallax(scene, {
+        relativeInput: true
+    });
+</script>
 </body>
 </html>
